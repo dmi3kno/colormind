@@ -1,0 +1,23 @@
+Package: colormind
+Title: Generate Color Palettes With AI
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Dmytro",
+           family = "Perepolkin",
+           role = c("aut", "cre"),
+           email = "dperepolkin@gmail.com",
+           comment = c(ORCID = "0000-0001-8558-6183"))
+Description: Use colormind.io API to generate aesthetically
+    pleasing color palettes.
+License: MIT + file LICENSE
+URL: https://github.com/dmi3kno/colormind
+BugReports: https://github.com/dmi3kno/colormind/issues
+Encoding: UTF-8
+Language: en
+LazyData: true
+RoxygenNote: 7.0.2
+Imports: 
+    httr,
+    jsonlite,
+    utils,
+    grDevices
