@@ -7,20 +7,22 @@ bg_color <- "#191919"
 bg_color2 <- "#2d2d2d"
 fg_color <- "gray60"
 
-pkgtxt <- image_blank(900,200, "transparent") %>%
+pkgtxt <- image_blank(1500,300, "transparent") %>%
   image_annotate("colormind", gravity = "center",
-                 size=180, font="Aller", color = "white", weight = 400)
+                 size=225, font="Quicksand", color = "white", weight = 400)
 
 pkglogo <-
   image_blank(1600,1600, "transparent") %>%
-  image_composite(clrmd, gravity = "center", offset = "+220-112", operator = "Over") %>%
-  image_composite(pkgtxt, gravity = "center", offset = "-40-20", operator = "Exclusion")
+  image_composite(clrmd, gravity = "center", offset = "+240-112", operator = "Over") %>%
+  image_composite(pkgtxt, gravity = "center", offset = "+0-30", operator = "Exclusion")
 
 clrmd_hex <-
   image_canvas_hex(fill_color = bg_color, border_color = fg_color) %>%
   image_compose(pkglogo, gravity = "center") %>%
   image_composite(image_canvas_hexborder(border_color = fg_color, border_size = 5),
                   gravity = "center", operator = "Atop")
+
+clrmd_hex %>% image_scale("50%")
 
 clrmd_hex %>%
   image_scale("1200x1200") %>%
