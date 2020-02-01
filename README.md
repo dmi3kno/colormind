@@ -9,8 +9,8 @@
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
-The goal of `colormind` is to assist in generating aestetically pleasing
-color scales using [colormind.io](http://colormind.io) palette
+The goal of `colormind` is to assist in generating aesthetically
+pleasing color scales using [colormind.io](http://colormind.io) palette
 generator.
 
 ## Installation
@@ -39,7 +39,7 @@ mods
 #> [4] "only_god_forgives" "water_color"       "lego_movie"
 ```
 
-Here’s randomly generated palette using “default” colormodel.
+Here’s randomly generated palette using “default” color model.
 
 ``` r
 colp <- get_colormind_colors()
@@ -62,7 +62,7 @@ scales::show_col(colp, borders = NA)
 <img src="man/figures/README-pressure-1.png" width="100%" />
 
 The missing values in your vector will be complemented by colormind.io
-using current colormodel.
+using current color model.
 
 ``` r
 colr <- get_colormind_colors(colp, "default")
@@ -72,8 +72,8 @@ scales::show_col(colr, borders = NA)
 
 <img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
 
-Colors are randomised every time you hit an API, so you may try it
-several times, or try another colormodel.
+Colors are randomized every time you hit an API, so you may try it
+several times, or try another color model.
 
 ``` r
 library(purrr)
