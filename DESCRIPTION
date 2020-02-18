@@ -1,6 +1,6 @@
 Package: colormind
 Title: Generate Color Palettes With AI
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Authors@R: 
     person(given = "Dmytro",
            family = "Perepolkin",
@@ -20,4 +20,7 @@ Imports:
     httr,
     jsonlite,
     utils,
-    grDevices
+    grDevices,
+    curl
+Suggests: 
+    testthat (>= 2.1.0)

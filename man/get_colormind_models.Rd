@@ -4,7 +4,15 @@
 \alias{get_colormind_models}
 \title{Get currently available models}
 \usage{
-get_colormind_models()
+get_colormind_models(
+  user_agent = "colormind R package github.com/dmi3kno/colormind",
+  ...
+)
+}
+\arguments{
+\item{user_agent}{Optional user agent string to be used when querying colormind.io}
+
+\item{...}{other parameters passed to `config` argument of `httr::GET`}
 }
 \value{
 character vector of color models
@@ -13,6 +21,7 @@ character vector of color models
 Get currently available models
 }
 \examples{
-get_colormind_models()
+if(curl::has_internet())
+  get_colormind_models()
 
 }

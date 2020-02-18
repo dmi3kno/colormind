@@ -6,7 +6,9 @@
 #' @return properly formatted query string
 #'
 ## usethis::use_package("utils")
+## usethis::use_package("jsonlite")
 #' @importFrom utils head
+#' @importFrom jsonlite toJSON
 prepare_colormind_query <- function(x, model){
   lst <- list(model=model)
 

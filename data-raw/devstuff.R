@@ -9,7 +9,7 @@ usethis::use_description(fields = list(
     Description = "Use colormind.io API to generate aesthetically pleasing color palettes.",
     `Authors@R` = 'c(person("Dmytro", "Perepolkin",
                    email = "dperepolkin@gmail.com", role = c("aut", "cre"),
-                          comment = c(ORCID = "0000-0001-8558-6183")))',
+                   comment = c(ORCID = "0000-0001-8558-6183")))',
     # License = "MIT + file LICENSE", # will add via separate command
     # Encoding = "UTF-8", # default, no need to specify
     # LazyData = "true" # default, no need to specify
@@ -18,11 +18,17 @@ usethis::use_description(fields = list(
     Language =  "en" # keep last
   )
 )
-usethis::use_mit_license("Dmytro Perepolkin")
+usethis::use_mit_license("Dmytro Perepolkin") #after use_description
+usethis::use_git()
+usethis::use_github()
+usethis::use_r("script")
 usethis::use_readme_rmd()
-usethis::use_lifecycle_badge("Experimental")
+usethis::use_lifecycle_badge("Experimental") # after use_readme_rmd
 usethis::use_news_md()
+usethis::use_testthat()
+usethis::use_test() #after use_testthat
 #usethis::use_travis()
 #usethis::use_appveyor()
 #usethis::use_pkgdown()
 #usethis::use_pkgdown_travis()
+#usethis::use_coverage()
